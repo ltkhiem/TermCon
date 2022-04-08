@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 
 echo "==============================="
@@ -7,7 +7,12 @@ echo "==============================="
 if ! command -v vim &> /dev/null
 then 
 	echo -n "[+] Installing vim..."
-	sudo apt-get install vim -y
+	if [[ "$OSTYPE" == "darwin"* ]]
+	then
+		brew install vim 
+		brew link vim
+	else
+		sudo apt-get install vim -y
 	echo "Done!"
 fi
 	
