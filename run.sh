@@ -20,7 +20,7 @@ then
 fi
 
 echo -n "[+] Copying vim configs..."
-cp .vimrc ~/.vimrc
+cp .vimrc ~
 echo "Done!"
 
 echo -n "[+] Installing plugins..."
