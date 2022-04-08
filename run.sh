@@ -20,6 +20,7 @@ then
 fi
 
 echo -n "[+] Copying vim configs..."
+mv ~/.vimrc ~/.vimrc.k.bak
 cp .vimrc ~
 echo "Done!"
 
