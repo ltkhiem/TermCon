@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 
 echo "==============================="
@@ -12,7 +12,8 @@ then
 		brew install vim 
 		brew link vim
 	else
-		sudo apt-get install vim -y
+		sudo apt-get install vim -y &> /dev/null
+	fi
 	echo "Done!"
 fi
 	
