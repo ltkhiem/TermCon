@@ -56,6 +56,9 @@ Plugin 'morhetz/gruvbox'
 "Vim floating terminal
 Plugin 'voldikss/vim-floaterm'
 
+"Vim commentary, for commenting stuff out
+Plugin 'tpope/vim-commentary'
+
 call vundle#end()
 filetype plugin indent on
 "-----------------------------------------
