@@ -26,8 +26,11 @@ then
 fi
 
 echo -n "[+] Copying vim configs..."
-mv ~/.vimrc ~/.vimrc.k.bak
-cp .vimrc ~
+if [[ -f ~/.vimrc ]]
+then 
+	mv ~/.vimrc ~/.vimrc.k.bak
+fi
+cp ~/TermCon/.vimrc ~
 echo "Done!"
 
 echo -n "[+] Installing plugins..."
