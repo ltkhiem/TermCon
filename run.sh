@@ -37,7 +37,7 @@ fi
 cp ~/TermCon/.vimrc ~
 
 vim_version=$(vim --version | head -1 | grep -o '[0-9]\.[0-9]')
-if [ ! $(echo "$vim_version < 8.2" | bc -l) ] 
+if [ $(echo "$vim_version < 8.2" | bc -l) ] 
 then 
 	p1s="\"colorscheme dracula"
 	p1r="colorscheme gruvbox"
