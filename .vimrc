@@ -59,6 +59,12 @@ Plugin 'voldikss/vim-floaterm'
 "Vim commentary, for commenting stuff out
 Plugin 'tpope/vim-commentary'
 
+"Vim Copilot
+Plugin 'github/copilot.vim'
+
+"Vim LaTex
+Plugin 'lervag/vimtex'
+
 call vundle#end()
 filetype plugin indent on
 "-----------------------------------------
@@ -163,4 +169,24 @@ nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 " ----- Floaterm settings -----
 cnoreabbrev ftn FloatermNew
 cnoreabbrev ftt FloatermToggle
+
+" ----- LaTeX settings -----
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_mode = 0
+let g:vimtex_compiler_latexmk = {
+      \ 'options' : [
+      \   '-verbose',
+      \   '-file-line-error',
+      \   '-synctex=1',
+      \   '-interaction=nonstopmode',
+      \   '-pdf',
+      \   '-shell-escape',
+      \   '-xelatex',
+      \   '-outdir=' . expand('%:p:h'),
+      \ ],
+      \}
+let g:vimtex_quickfix_open_on_warning = 0
+let g:vimtex_quickfix_open_on_error = 0
+let g:vimtex_mapleader = ','
+
 
