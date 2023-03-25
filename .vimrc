@@ -292,3 +292,12 @@ let g:mkdp_filetypes = ['markdown']
 " By default the theme is define according to the preferences of the system
 let g:mkdp_theme = 'dark'
 
+" ----- Competitive Programming C++ settings -----
+autocmd FileType cpp nnoremap     <leader>rm    :!g++ -g --std=c++11 % -o %:r<CR>
+autocmd FileType cpp nnoremap     <leader>rr    :!./%:r<CR>
+autocmd FileType cpp nnoremap     <leader>rt    :!for f in %:r.*.test; do echo "TEST: $f"; ./%:r < $f; done<CR>
+autocmd FileType cpp set tabstop=4
+autocmd FileType cpp set shiftwidth=4
+autocmd FileType cpp set expandtab
+autocmd FileType cpp set softtabstop=4
+
