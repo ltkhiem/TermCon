@@ -172,6 +172,8 @@ nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 " ----- Floaterm settings -----
 cnoreabbrev ftn FloatermNew
 cnoreabbrev ftt FloatermToggle
+nnoremap <silent> <leader>f :FloatermToggle<CR>
+tnoremap <silent> <leader>f <C-\><C-n>:FloatermToggle<CR>
 
 " ----- LaTeX settings -----
 let g:vimtex_view_method = 'zathura'
