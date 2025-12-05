@@ -11,6 +11,10 @@ This repo is a collection of configurations of my terminal.
 - others (to be confirmed)
 
 ## Update Logs
+- Changed to nvim, with lazyvim config
+- Used TPM (Tmux Plugin Manager) for tmux.
+
+### Long ago
 - Currently only providing setup for vim
 - Other settings will be updated in future.
 
